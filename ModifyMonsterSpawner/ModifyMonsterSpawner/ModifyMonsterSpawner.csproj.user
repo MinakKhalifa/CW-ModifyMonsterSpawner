@@ -1,0 +1,17 @@
+<Project>
+    <!-- Custom Variables -->
+    <PropertyGroup>
+        <GameDirectory>C:\SteamLibrary\steamapps\common\Content Warning\</GameDirectory>
+        <PluginsDirectory>C:\Users\nickv\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ContentWarning\profiles\stallerr\BepInEx\plugins\</PluginsDirectory>
+    </PropertyGroup>
+
+    <!-- Game Directories - Do Not Modify -->
+    <PropertyGroup>
+        <ManagedDirectory>$(GameDirectory)Content Warning_Data\Managed\</ManagedDirectory>
+    </PropertyGroup>
+
+    <!-- Copy to Plugin Directory for Quicker Testing -->
+    <Target Name="CopyFiles" AfterTargets="PostBuildEvent">
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginsDirectory)"/>
+    </Target>
+</Project>
